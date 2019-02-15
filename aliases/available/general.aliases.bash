@@ -15,8 +15,36 @@ alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
 alias l='ls -a'
 alias l1='ls -1'
+alias lsg='ls | grep'
+alias ldir="ls -l | egrep '^d'"
+alias lf="ls -l | egrep -v '^d'"
 
+
+# History alias 
+alias histg="history | grep"
+
+# Disk usage
+alias df='df -kTh'
+alias du='du -kh'
+
+# Displays what occured on this day
+alias ftoday='grep -h -d skip `date +%m/%d` /usr/share/calendar/*'
+
+# Sudo last command.
+alias please='/usr/bin/sudo $(history -p !!)'
 alias _="sudo"
+
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias showreminders="cat ~/.reminder"
+
+# Shortcuts to common directories
+alias cdown="cd /Users/fhenriquez/Downloads" 
+alias cdinvs="cd /home/fhenriquez/investigation"
+alias cdmisc="cd /home/fhenriquez/misc_scratch"
+
+alias utcdate='TZ=utc date'
+alias weather='curl wttr.in/01830'
+alias mostcmd="cut -d ' ' -f1 ~/.bash_history | sort | uniq -c | sort -nr | head -10"
 
 # Shortcuts to edit startup files
 alias vbrc="vim ~/.bashrc"
@@ -99,9 +127,8 @@ alias bshenc="bash-it enable completion"
 # Shorten extract
 alias xt="extract"
 
-# sudo editors
+# sudo vim
 alias svim="sudo vim"
-alias snano="sudo nano"
 
 # Display whatever file is regular file or folder
 catt() {
