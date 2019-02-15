@@ -497,3 +497,17 @@ function safe_append_prompt_command {
         fi
     fi
 }
+
+# Openstack Prompt
+# Check openstack prompt
+function check_osp_prompt() {
+  if [[ -z $OS_USERNAME ]]; then
+    ps_osp_username=""
+    ps_osp_environment=""
+    echo $ps_osp_username$ps_osp_environment
+ else
+    ps_osp_username="($(set_openstack_user_color)${OS_USERNAME}${normal}"
+    ps_osp_environment=".$(set_openstack_env_color)${OS_REGION}${normal})"
+    echo $ps_osp_username$ps_osp_environment
+  fi
+}
