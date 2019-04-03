@@ -39,8 +39,8 @@ alias showreminders="cat ~/.reminder"
 
 # Shortcuts to common directories
 alias cdown="cd /Users/fhenriquez/Downloads" 
-alias cdinvs="cd /home/fhenriquez/investigation"
-alias cdmisc="cd /home/fhenriquez/misc_scratch"
+alias cdinvs="cd ~/investigation"
+alias cdmisc="cd ~/misc_scratch"
 
 alias utcdate='TZ=utc date'
 alias weather='curl wttr.in/01830'
