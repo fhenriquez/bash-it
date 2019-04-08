@@ -102,6 +102,7 @@ fi
 # Directory
 alias md='mkdir -p'
 alias rd='rmdir'
+alias mcdd='mcd $(date +%d%b%Y)'
 
 # Common misspellings of bash-it
 alias shit='bash-it'
